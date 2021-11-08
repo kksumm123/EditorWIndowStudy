@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class GoldUI : MonoBehaviour
 {
@@ -19,7 +22,12 @@ public class GoldUI : MonoBehaviour
     public void AddGold(int addValue)
     {
         // 디버그 체크박스가 체크 되어있을 때만 수치변화를 보여주자
-        print($"{gold} -> {gold + addValue}");
+#if UNITY_EDITOR
+        // if (디버그모드())
+        // if (EditorPrefs.GetBool)
+        if (EditorPrefs.GetBool("디버그모드"))
+            print($"{gold} -> {gold + addValue}");
+#endif
 
         gold += addValue;
         Refresh();
