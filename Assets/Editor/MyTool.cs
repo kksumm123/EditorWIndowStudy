@@ -9,7 +9,6 @@ public class MyTool : EditorWindow
     [MenuItem("Tools/MyTool")]
     static void MyMenu()
     {
-        Debug.Log("나 불려써?");
         GetWindow(typeof(MyTool));
     }
     string goldString = "";
@@ -24,7 +23,6 @@ public class MyTool : EditorWindow
                 int gold = Convert.ToInt32(goldString);
                 if (gold > 0)
                 {
-                    Debug.Log($"{gold} 골드 주께");
                     GoldUI.instance.AddGold(gold);
                 }
             }
