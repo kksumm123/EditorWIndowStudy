@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class MyTool : EditorWindow
 {
-
     [MenuItem("Tools/MyTool")]
     static void MyMenu()
     {
@@ -18,7 +17,7 @@ public class MyTool : EditorWindow
     {
         GUILayout.BeginHorizontal();
         {
-            GUILayout.Label("∞ÒµÂ\b\b");
+            GUILayout.Label("∞ÒµÂ");
             goldString = GUILayout.TextField(goldString, 10);
             if (GUILayout.Button("¡ˆ±ﬁ«œ±‚"))
             {
@@ -26,7 +25,7 @@ public class MyTool : EditorWindow
                 if (gold > 0)
                 {
                     Debug.Log($"{gold} ∞ÒµÂ ¡÷≤≤");
-
+                    GoldUI.instance
                 }
             }
         }
