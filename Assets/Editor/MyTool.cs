@@ -25,7 +25,7 @@ public class MyTool : EditorWindow
                 if (gold > 0)
                 {
                     Debug.Log($"{gold} ∞ÒµÂ ¡÷≤≤");
-                    GoldUI.instance
+                    GoldUI.instance.AddGold(gold);
                 }
             }
         }
