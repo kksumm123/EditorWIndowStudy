@@ -16,7 +16,6 @@ public class MyTool : EditorWindow
     bool varDebugMode = false;
     void OnGUI()
     {
-
         GUILayout.BeginHorizontal();
         {
             GUILayout.Label("°ñµå", GUILayout.MaxWidth(30));
