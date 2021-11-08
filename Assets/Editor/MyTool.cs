@@ -13,7 +13,7 @@ public class MyTool : EditorWindow
         Debug.Log("나 불려써?");
         GetWindow(typeof(MyTool));
     }
-    string goldString;
+    string goldString = "";
     void OnGUI()
     {
         GUILayout.BeginHorizontal();
@@ -22,7 +22,12 @@ public class MyTool : EditorWindow
             goldString = GUILayout.TextField(goldString, 10);
             if (GUILayout.Button("지급하기"))
             {
-                Debug.Log($"{goldString} 골드 주까?");
+                int gold = Convert.ToInt32(goldString);
+                if (gold > 0)
+                {
+                    Debug.Log($"{gold} 골드 주께");
+
+                }
             }
         }
         GUILayout.EndHorizontal();
